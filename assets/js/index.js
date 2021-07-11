@@ -25,6 +25,7 @@ function getUserInfo() {
             if (res.status !== 0) {
                 return layui.layer.msg("获取信息失败");
             }
+            console.log(res);
             renderAvatar(res.data);
         },
         // complete: function(res) {
@@ -40,7 +41,7 @@ function getUserInfo() {
 //渲染用户头像函数
 function renderAvatar(user) {
     //渲染用户昵称
-    var username = user.username || user.nickname;
+    var username = user.nickname || user.username;
     $("#welcome").html("欢迎&nbsp&nbsp" + username);
     //渲染用户头像
     if (user.user_pic !== null) {
