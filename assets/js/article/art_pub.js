@@ -93,7 +93,8 @@ $(function() {
                     return layer.msg("发布失败");
                 }
                 layer.msg("发布文章成功");
-                // location.href = "/article/art_list.html";
+                location.href = "/article/art_list.html";
+                window.parent.activeArtList();
             }
         })
     }

@@ -53,3 +53,8 @@ function renderAvatar(user) {
         $(".text_avatar").html(first).show();
     }
 }
+
+function activeArtList() {
+    $(".layui-this").removeClass("layui-this");
+    $("#art_list").addClass("layui-this");
+}
